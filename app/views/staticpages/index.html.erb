@@ -1,6 +1,5 @@
 <h1>Front page</h1>
-<form action="#">
-  Tag to Search: 
-  <input type="text">
-  <input type="submit" value="Submit">
-</form>
+<%= form_tag(staticpages_path,method: "post") do %>
+  <%= text_field_tag("tag") %>
+  <%= submit_tag("Submit") %>
+<% end %> 
