@@ -5,9 +5,12 @@ class StaticpagesController < ApplicationController
   end
 
   def create
-		`python test.py`
-    test = `python test.py`
-    Tag.create(tag: "a", count: test)
+		#`python test.py`
+    puts `pwd`
+    #test = `python test.py` 
+    test2 = Rails.root.join('test.py')
+    test = `python #{test2}`
+    Tag.create(tag: test, count: 1)
     redirect_to root_path
   end
 
