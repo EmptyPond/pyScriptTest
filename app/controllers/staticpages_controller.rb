@@ -2,6 +2,7 @@ class StaticpagesController < ApplicationController
 
   def index
     @tag = Tag.new
+    @tags = Tag.all
   end
 
   def create

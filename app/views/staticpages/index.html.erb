@@ -3,3 +3,11 @@
   <%= text_field_tag("tag") %>
   <%= submit_tag("Submit") %>
 <% end %> 
+
+<% @tags.each do |t| %>
+  <div>
+    <h1 style="display:inline;"><%= t.tag %></h1>
+    -
+    <h5 style="display:inline;"><%= t.count %></h5>
+  </div>
+<% end %>
