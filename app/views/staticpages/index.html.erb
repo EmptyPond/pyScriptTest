@@ -5,11 +5,15 @@
 <% end %> 
 
 <% @tags.each do |t| %>
-  <div>
-    <h1 style="display:inline;"><%= t.tag %></h1>
+  <div id="_<%= t.id %>">
+    <h1 class="tag" style="display:inline;"><%= t.tag %></h1>
     -
-    <h5 style="display:inline;"><%= t.count %></h5>
+    <h5 class="count" style="display:inline;"><%= t.count %></h5>
     -
-    <h5 style="display:inline;"><%= t.processing %></h5>
+    <h5 class="processing" style="display:inline;"><%= t.processing %></h5>
+    -
+    <h5 class="created_at" style="display:inline;"><%= t.created_at %></h5>
+    -
+    <h5 class="updated_at" style="display:inline;"><%= t.updated_at %></h5>
   </div>
 <% end %>
