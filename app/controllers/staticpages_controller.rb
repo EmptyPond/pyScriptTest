@@ -6,9 +6,9 @@ class StaticpagesController < ApplicationController
   end
 
   def create
-    pyscript_path = Rails.root.join('bs4_script.py')
-    tag_var = `python #{pyscript_path} #{params[:tag]}`.chomp.to_i
-    Tag.create(tag: params[:tag], count: tag_var)
+    #pyscript_path = Rails.root.join('bs4_script.py')
+    #tag_var = `python #{pyscript_path} #{params[:tag]}`.chomp.to_i
+    Tag.create(tag: params[:tag], count: nil,processing:"Currently Working")
     redirect_to root_path
   end
 
