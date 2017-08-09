@@ -7,7 +7,10 @@ App.board = App.cable.subscriptions.create "BoardChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    console.log data['update'].id
+    console.log '**************'
+    console.log data
+    console.log '*************'
+
     $('#_' + parseInt(data['update'].id) + " .count").text(data['update'].count)
     $('#_' + parseInt(data['update'].id) + " .processing").text(data['update'].processing)
     $('#_' + parseInt(data['update'].id) + " .updated_at").text(data['update'].updated_at)
